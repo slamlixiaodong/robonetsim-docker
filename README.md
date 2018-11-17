@@ -4,11 +4,9 @@
 This repository contains files for docker to compile and run the integrated simulators in the preferred environment of Ubuntu 14.04.
 The Dockerfile is based on [EduardoFF's repository](https://github.com/EduardoFF/RoboNetSim) with minor modifications.
 
-Recommended environment:
-- Ubuntu 18.04
-- Nvidia Graphic card
+Note: Your PC needs to have a Nvidia graphic card.
 
-# How to build
+# How to build the environment
 
 ## Option1: building an image from the Dockerfile
 ```
@@ -21,7 +19,9 @@ chmod u+x build.sh
 docker pull tidota/robonetsim
 ```
 
-# How to run
+# How to run the simulator
+
+You need to run the network simulator first, and then run the robot simulator.
 
 ## NS-3 network simulator
 Run the docker container.
