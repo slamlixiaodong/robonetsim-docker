@@ -1,6 +1,7 @@
 # Docker settings for RoboNetSim
 
-This repository contains files for docker to run [RoboNetSim](http://www.giannidicaro.com/robonetsim.html).
+[RoboNetSim](http://www.giannidicaro.com/robonetsim.html) is a framework to integrate robot and network simulators.
+This repository contains files for docker to compile and run the integrated simulators in the preferred environment of Ubuntu 14.04.
 The Dockerfile is based on [EduardoFF's repository](https://github.com/EduardoFF/RoboNetSim) with minor modifications.
 
 Recommended environment:
@@ -9,20 +10,20 @@ Recommended environment:
 
 # How to build
 
-## Option1
+## Option1: building an image from the Dockerfile
 ```
 chmod u+x build.sh
 ./build.sh robonetsim
 ```
 
-## Option2
+## Option2: pulling the prepared image from Docker hub
 ```
 docker pull tidota/robonetsim
 ```
 
 # How to run
 
-## Network simulator
+## NS-3 network simulator
 Run the docker container.
 ```
 chmod u+x start.sh
@@ -36,7 +37,7 @@ cd /RoboNetSim/ns-3-dev-git
 ./start.sh
 ```
 
-## Robot simulator.
+## ARGoS simulator
 Open another terminal and access the docker container.
 You can check the container's name by the command `docker container list`.
 ```
