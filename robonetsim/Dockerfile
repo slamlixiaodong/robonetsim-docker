@@ -6,6 +6,9 @@ RUN apt-get update && apt-get install -y \
         libqt4-dev \
         libqt4-gui libqt4-opengl-dev freeglut3-dev libxmu-dev libxi-dev \
         build-essential \
+        software-properties-common \
+        vim \
+        wget \
         cmake  && rm -rf /var/lib/apt/lists/*
 
 
