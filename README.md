@@ -3,10 +3,21 @@
 This repository contains files for docker to run [RoboNetSim](http://www.giannidicaro.com/robonetsim.html).
 The Dockerfile is based on [EduardoFF's repository](https://github.com/EduardoFF/RoboNetSim) with minor modifications.
 
+Recommended environment:
+- Ubuntu 18.04
+- Nvidia Graphic card
+
 # How to build
+
+## Option1
 ```
 chmod u+x build.sh
 ./build.sh robonetsim
+```
+
+## Option2
+```
+docker pull tidota/robonetsim
 ```
 
 # How to run
