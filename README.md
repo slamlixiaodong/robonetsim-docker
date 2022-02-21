@@ -39,10 +39,11 @@ systemctl restart docker
 
 
 ## set env
+```
 XSOCK=/tmp/.X11-unix
 XAUTH=/tmp/.docker.xauth
 sudo xauth nlist :0 | sed -e 's/^..../ffff/' | xauth -f $XAUTH nmerge -
-
+```
 
 
 # How to run the simulator
