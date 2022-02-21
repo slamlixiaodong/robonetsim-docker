@@ -1,6 +1,11 @@
 FROM nvidia/opengl:1.0-glvnd-devel-ubuntu14.04
 
+
 RUN apt-get update && apt-get install -y \
+        dialog apt-utils 
+
+RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections
+RUN apt-get install -y \
         git \
         libgsl0-dev \
         libqt4-dev \
@@ -10,7 +15,7 @@ RUN apt-get update && apt-get install -y \
         vim \
         wget \
         cmake  && rm -rf /var/lib/apt/lists/*
-
+RUN apt-get install xauth
 
 WORKDIR /root
 USER root
@@ -49,3 +54,4 @@ RUN set -x \
 RUN rm -rf /var/lib/apt/lists/*
 
 VOLUME /RoboNetSim
+
